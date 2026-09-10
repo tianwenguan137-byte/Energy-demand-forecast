@@ -19,7 +19,7 @@ XGBoost wins on both metrics, but by a modest margin — roughly 180 MW of RMSE 
 there is not much left for the model class to add. Getting materially below this
 requires new information, not a better regressor.
 
-![Actual vs predicted load, and XGBoost feature importance](figures/results.png)
+![Actual vs predicted load, and XGBoost feature importance](results.png)
 
 ## Data
 
@@ -89,9 +89,7 @@ the least gain of any feature.
 
 ```
 PJME_load_forecasting.ipynb   full pipeline, executed with outputs
-figures/results.png           predicted vs actual, and feature importance
-results.json                  metrics and residual diagnostics
-plot_data.csv                 the plotted two-week window, for re-styling figures
+results.png                   predicted vs actual, and feature importance
 ```
 
 ## Running it
@@ -101,7 +99,9 @@ pip install pandas numpy scikit-learn xgboost holidays matplotlib
 ```
 
 Place `PJME_hourly.csv` next to the notebook (or point the `PJME_CSV` environment
-variable at it) and run all cells.
+variable at it) and run all cells. The run regenerates the figure as
+`figures/results.png` and also writes `results.json` (metrics and residual
+diagnostics) and `plot_data.csv` (the plotted two-week window).
 
 ## Roadmap
 
